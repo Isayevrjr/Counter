@@ -9,11 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var clickButton: UIButton!
+    
+    @IBOutlet weak var labelView: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
+    var click = 0
+    @IBAction func buttonDidTap(_ sender: Any) {
+        print("Нажатие")
+        click += 1
+        labelView.text = "Значение счетчика: \(click)"
+    }
+    
 }
 
